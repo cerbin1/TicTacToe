@@ -1,4 +1,4 @@
-public class Game {
+class Game {
     void run() {
         Console console = new Console();
         Board board = new Board();

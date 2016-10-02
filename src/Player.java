@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Player {
+class Player {
     public final Scanner scanner = new Scanner(System.in);
 
     private int move;
