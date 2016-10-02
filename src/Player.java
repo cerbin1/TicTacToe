@@ -23,23 +23,23 @@ class Player {
     }
 
     public boolean checkIfPlayerWins(char[] charBoard) {
-        char znak;
+        char playersCharacter;
         if (playersTurn % 2 == 0) {
-            znak = 'o';
+            playersCharacter = 'o';
         } else {
-            znak = 'x';
+            playersCharacter = 'x';
         }
-        if (((charBoard[0] == znak) && (charBoard[1] == znak) && (charBoard[2] == znak)) ||
-                ((charBoard[3] == znak) && (charBoard[4] == znak) && (charBoard[5] == znak)) ||
-                ((charBoard[6] == znak) && (charBoard[7] == znak) && (charBoard[8] == znak)) ||
-                ((charBoard[0] == znak) && (charBoard[3] == znak) && (charBoard[6] == znak)) ||
-                ((charBoard[1] == znak) && (charBoard[4] == znak) && (charBoard[7] == znak)) ||
-                ((charBoard[2] == znak) && (charBoard[5] == znak) && (charBoard[8] == znak)) ||
-                ((charBoard[0] == znak) && (charBoard[4] == znak) && (charBoard[8] == znak))) {
-            if (znak == 'o') {
-                System.out.println("kolko wygralo");
+        if (((charBoard[0] == playersCharacter) && (charBoard[1] == playersCharacter) && (charBoard[2] == playersCharacter)) ||
+                ((charBoard[3] == playersCharacter) && (charBoard[4] == playersCharacter) && (charBoard[5] == playersCharacter)) ||
+                ((charBoard[6] == playersCharacter) && (charBoard[7] == playersCharacter) && (charBoard[8] == playersCharacter)) ||
+                ((charBoard[0] == playersCharacter) && (charBoard[3] == playersCharacter) && (charBoard[6] == playersCharacter)) ||
+                ((charBoard[1] == playersCharacter) && (charBoard[4] == playersCharacter) && (charBoard[7] == playersCharacter)) ||
+                ((charBoard[2] == playersCharacter) && (charBoard[5] == playersCharacter) && (charBoard[8] == playersCharacter)) ||
+                ((charBoard[0] == playersCharacter) && (charBoard[4] == playersCharacter) && (charBoard[8] == playersCharacter))) {
+            if (playersCharacter == 'o') {
+                System.out.println("Circle wins!");
             } else {
-                System.out.println("krzyzyk wygral");
+                System.out.println("Cross wins!");
             }
             return true;
         } else {
