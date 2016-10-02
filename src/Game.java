@@ -19,7 +19,6 @@ class Game {
                 } else {
                     board.setCircle(player.getPlayersMove());
                     board.setBooleanBoardTrueAtIndex(player.getPlayersMove());
-                    console.displayCharBoard(board.getCharBoard());
                     if (player.checkIfPlayerWins(board.getCharBoard())) {
                         break;
                     }
@@ -33,13 +32,17 @@ class Game {
                 } else {
                     board.setCross(player.getPlayersMove());
                     board.setBooleanBoardTrueAtIndex(player.getPlayersMove());
-                    console.displayCharBoard(board.getCharBoard());
                     if (player.checkIfPlayerWins(board.getCharBoard())) {
                         break;
                     }
                     player.incrementTurn();
                 }
             }
+            if (player.getPlayersTurn() == 9) {
+                console.drawn();
+                break;
+            }
+            console.displayCharBoard(board.getCharBoard());
         }
     }
 }

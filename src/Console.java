@@ -24,4 +24,7 @@ class Console {
     public void thisFieldIsNotEmpty() {
         System.out.println("This field is not empty. Try to choose another.");
     }
+    public void drawn() {
+        System.out.println("Drawn! Nobody wins.");
+    }
 }
