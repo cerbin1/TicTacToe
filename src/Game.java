@@ -4,15 +4,26 @@ public class Game {
         Board board = new Board();
         Player player = new Player();
 
+        int number = 1;
         board.setCharBoard();
         console.displayCharBoard(board.getCharBoard());
 
         while(true) {
-            console.circleMove();
-            player.setMove();
-            board.setMove(player.getMove());
+            if (number % 2 == 1) {
+                console.circleMove();
+                player.setMove();
+                board.setCircle(player.getMove());
+                console.displayCharBoard(board.getCharBoard());
+                number ++;
+            }
+            else {
+                console.crossMove();
+                player.setMove();
+                board.setCross(player.getMove());
+                console.displayCharBoard(board.getCharBoard());
+                number ++;
+            }
 
-            console.displayCharBoard(board.getCharBoard());
 
         }
     }

@@ -20,11 +20,13 @@ public class Board {
         return charBoard;
     }
 
-    public void setMove(int index) {
+    public void setCircle(int index) {
         charBoard[index - 1] = 'o';
-
     }
 
+    public void setCross(int index) {
+        charBoard[index - 1] = 'x';
+    }
 
 
 

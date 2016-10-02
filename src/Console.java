@@ -16,4 +16,7 @@ public class Console {
     public void circleMove() {
         System.out.println("Circle's move");
     }
+    public void crossMove() {
+        System.out.println("Cross's move");
+    }
 }
