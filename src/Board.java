@@ -18,6 +18,10 @@ public class Board {
         }
     }
 
+    public char[] getCharBoard() {
+        return charBoard;
+    }
+
     public void initializeBooleanBoard() {
         booleanBoard = new boolean[9];
     }
@@ -27,17 +31,14 @@ public class Board {
             booleanBoard[i] = false;
         }
     }
+
     public boolean getBooleanBoardValueAtIndex(int index) {
         return booleanBoard[index];
     }
 
+
     public void setBooleanBoardTrueAtIndex(int index) {
         booleanBoard[index] = true;
-    }
-
-
-    public char[] getCharBoard() {
-        return charBoard;
     }
 
     public void setCircle(int index) {

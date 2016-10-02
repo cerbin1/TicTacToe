@@ -19,4 +19,7 @@ public class Console {
     public void crossMove() {
         System.out.println("Cross's move");
     }
+    public void playerWrongMove() {
+        System.out.println("Tu juz ktos postawil znak. Sprobuj jeszcze raz");
+    }
 }
