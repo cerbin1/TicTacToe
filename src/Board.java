@@ -33,11 +33,11 @@ class Board {
     }
 
     public boolean getBooleanBoardValueAtIndex(int index) {
-        return booleanBoard[index];
+        return booleanBoard[index - 1];
     }
 
     public void setBooleanBoardTrueAtIndex(int index) {
-        booleanBoard[index] = true;
+        booleanBoard[index - 1] = true;
     }
 
     public void setCircle(int index) {
