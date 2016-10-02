@@ -14,11 +14,11 @@ class Console {
     }
 
     public void askForCircleMove() {
-        System.out.println("Circle's move");
+        System.out.println("Circle move");
     }
 
     public void crossMove() {
-        System.out.println("Cross's move");
+        System.out.println("Cross move");
     }
 
     public void thisFieldIsNotEmpty() {
