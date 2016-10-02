@@ -4,7 +4,11 @@ public class Game {
         Board board = new Board();
 
         board.setCharBoard();
+        console.displayHelloMessage();
+        console.displayInstructions();
         console.displayCharBoard(board.getCharBoard());
+
+        console.circleMove();
     }
 }
 

@@ -12,4 +12,8 @@ public class Console {
         System.out.println("[" + charBoard[3] + "]" + "[" + charBoard[4] + "]" + "[" + charBoard[5] + "]");
         System.out.println("[" + charBoard[6] + "]" + "[" + charBoard[7] + "]" + "[" + charBoard[8] + "]");
     }
+
+    public void circleMove() {
+        System.out.println("Circle's move");
+    }
 }
