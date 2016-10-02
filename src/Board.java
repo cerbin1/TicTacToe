@@ -1,8 +1,10 @@
 public class Board {
     private char[] charBoard;
+    private boolean[] booleanBoard;
 
     public Board() {
         initializeCharBoard();
+        initializeBooleanBoard();
     }
 
 
@@ -16,12 +18,24 @@ public class Board {
         }
     }
 
+    public void initializeBooleanBoard() {
+        booleanBoard = new boolean[9];
+    }
+
+    public void setBooleanBoard() {
+        for (int i = 0; i < booleanBoard.length; i++) {
+            booleanBoard[i] = false;
+        }
+    }
+
+
     public char[] getCharBoard() {
         return charBoard;
     }
 
     public void setCircle(int index) {
         charBoard[index - 1] = 'o';
+
     }
 
     public void setCross(int index) {
