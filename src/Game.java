@@ -1,6 +1,10 @@
 public class Game {
     void run() {
+        Console console = new Console();
+        Board board = new Board();
 
+        board.setCharBoard();
+        console.displayCharBoard(board.getCharBoard());
     }
 }
 
