@@ -16,9 +16,11 @@ class Console {
     public void circleMove() {
         System.out.println("Circle's move");
     }
+
     public void crossMove() {
         System.out.println("Cross's move");
     }
+
     public void playerWrongMove() {
         System.out.println("Tu juz ktos postawil znak. Sprobuj jeszcze raz");
     }

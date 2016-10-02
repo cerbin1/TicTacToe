@@ -10,27 +10,24 @@ class Game {
         board.setBooleanBoard();
 
 
-        while(true) {
+        while (true) {
             if (player.getTurn() % 2 == 0) {
                 console.circleMove();
                 player.setMove();
-                if(board.getBooleanBoardValueAtIndex(player.getMove())){
+                if (board.getBooleanBoardValueAtIndex(player.getMove())) {
                     console.playerWrongMove();
-                }
-                else {
+                } else {
                     board.setCircle(player.getMove());
                     board.setBooleanBoardTrueAtIndex(player.getMove());
                     console.displayCharBoard(board.getCharBoard());
                     player.incrementTurn();
                 }
-            }
-            else {
+            } else {
                 console.crossMove();
                 player.setMove();
-                if(board.getBooleanBoardValueAtIndex(player.getMove())){
+                if (board.getBooleanBoardValueAtIndex(player.getMove())) {
                     console.playerWrongMove();
-                }
-                else {
+                } else {
                     board.setCross(player.getMove());
                     board.setBooleanBoardTrueAtIndex(player.getMove());
                     console.displayCharBoard(board.getCharBoard());

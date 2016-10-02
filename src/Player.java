@@ -15,7 +15,7 @@ class Player {
     }
 
     public void incrementTurn() {
-        turn ++;
+        turn++;
     }
 
     public int getTurn() {
