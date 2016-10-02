@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 class Player {
-    private final Scanner scanner = new Scanner(System.in);
+    private final Scanner scanner = new Scanner(System.in);  // TODO to nie powinno być tu
 
     private int playersMove;
     private int playersTurn = 0;
@@ -24,8 +24,8 @@ class Player {
     }
 
     boolean checkIfPlayerWins(char[] charBoard) {
-        char playersCharacter;
-        if (playersTurn % 2 == 0) {
+        char playersCharacter; // TODO to powinien byc enum
+        if (playersTurn % 2 == 0) { // TODO to do wydzielenia
             playersCharacter = 'o';
         } else {
             playersCharacter = 'x';
@@ -37,7 +37,7 @@ class Player {
                 ((charBoard[1] == playersCharacter) && (charBoard[4] == playersCharacter) && (charBoard[7] == playersCharacter)) ||
                 ((charBoard[2] == playersCharacter) && (charBoard[5] == playersCharacter) && (charBoard[8] == playersCharacter)) ||
                 ((charBoard[0] == playersCharacter) && (charBoard[4] == playersCharacter) && (charBoard[8] == playersCharacter))) {
-            if (playersCharacter == 'o') {
+            if (playersCharacter == 'o') { // TODO ten cały if powinien być gdzieś indziej.
                 System.out.println("Circle wins!");
             } else {
                 System.out.println("Cross wins!");

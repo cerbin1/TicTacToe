@@ -8,7 +8,7 @@ class Game {
         board.fillBooleanBoard();
         console.displayHelloMessage();
         console.displayInstructions();
-        console.displayCharBoard(board.getCharBoard());
+        console.displayCharBoard(board.getCharBoard()); // TODO board powinien byc polem console, a nie przez parametr
 
         while (true) {
             if (player.getPlayersTurn() % 2 == 0) {

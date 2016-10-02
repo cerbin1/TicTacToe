@@ -13,7 +13,7 @@ class Console {
         System.out.println("[" + charBoard[6] + "]" + "[" + charBoard[7] + "]" + "[" + charBoard[8] + "]");
     }
 
-    void askForCircleMove() {
+    void askForCircleMove() { // TODO metody ask powinny zrobić scanner.nextLine() i zwracać tekst
         System.out.println("Circle move");
     }
 
