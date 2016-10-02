@@ -28,6 +28,7 @@ class Game {
                     board.setCircle(player.getPlayersMove());
                     board.setBooleanBoardTrueAtIndex(player.getPlayersMove());
                     if (player.checkIfPlayerWins(board.getCharBoard())) {
+                        console.displayCharBoard(board.getCharBoard());
                         break;
                     }
                     player.incrementTurn();
@@ -49,6 +50,7 @@ class Game {
                     board.setCross(player.getPlayersMove());
                     board.setBooleanBoardTrueAtIndex(player.getPlayersMove());
                     if (player.checkIfPlayerWins(board.getCharBoard())) {
+                        console.displayCharBoard(board.getCharBoard());
                         break;
                     }
                     player.incrementTurn();
