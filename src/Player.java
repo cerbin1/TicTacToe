@@ -1,34 +1,29 @@
 import java.util.Scanner;
 
 class Player {
-    public final Scanner scanner = new Scanner(System.in);
+    private final Scanner scanner = new Scanner(System.in);
 
     private int playersMove;
     private int playersTurn = 0;
 
     boolean setPlayersMove() {
             playersMove = Integer.parseInt(scanner.nextLine());
-        if ((playersMove < 1) || (playersMove > 10)) {
-            return true;
-        }
-        else {
-            return false;
-        }
+        return (playersMove < 1) || (playersMove > 10);
     }
 
-    public int getPlayersMove() {
+    int getPlayersMove() {
         return playersMove;
     }
 
-    public void incrementTurn() {
+    void incrementTurn() {
         playersTurn++;
     }
 
-    public int getPlayersTurn() {
+    int getPlayersTurn() {
         return playersTurn;
     }
 
-    public boolean checkIfPlayerWins(char[] charBoard) {
+    boolean checkIfPlayerWins(char[] charBoard) {
         char playersCharacter;
         if (playersTurn % 2 == 0) {
             playersCharacter = 'o';
