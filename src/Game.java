@@ -4,24 +4,23 @@ public class Game {
         Board board = new Board();
         Player player = new Player();
 
-        int number = 1;
         board.setCharBoard();
         console.displayCharBoard(board.getCharBoard());
 
         while(true) {
-            if (number % 2 == 1) {
+            if (player.getTurn() % 2 == 1) {
                 console.circleMove();
                 player.setMove();
                 board.setCircle(player.getMove());
                 console.displayCharBoard(board.getCharBoard());
-                number ++;
+                player.incrementTurn();
             }
             else {
                 console.crossMove();
                 player.setMove();
                 board.setCross(player.getMove());
                 console.displayCharBoard(board.getCharBoard());
-                number ++;
+                player.incrementTurn();
             }
 
 
