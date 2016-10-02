@@ -7,7 +7,7 @@ class Game {
         board.setCharBoard();
         console.displayCharBoard(board.getCharBoard());
 
-        board.setBooleanBoard();
+        board.fillBooleanBoard();
 
 
         while (true) {
@@ -20,6 +20,9 @@ class Game {
                     board.setCircle(player.getMove());
                     board.setBooleanBoardTrueAtIndex(player.getMove());
                     console.displayCharBoard(board.getCharBoard());
+                    if (player.checkIfPlayerWins(board.getCharBoard())) {
+                        break;
+                    }
                     player.incrementTurn();
                 }
             } else {
@@ -31,6 +34,9 @@ class Game {
                     board.setCross(player.getMove());
                     board.setBooleanBoardTrueAtIndex(player.getMove());
                     console.displayCharBoard(board.getCharBoard());
+                    if (player.checkIfPlayerWins(board.getCharBoard())) {
+                        break;
+                    }
                     player.incrementTurn();
                 }
             }
