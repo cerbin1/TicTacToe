@@ -13,7 +13,7 @@ class Console {
         System.out.println("[" + charBoard[6] + "]" + "[" + charBoard[7] + "]" + "[" + charBoard[8] + "]");
     }
 
-    public void circleMove() {
+    public void askForCircleMove() {
         System.out.println("Circle's move");
     }
 
@@ -21,7 +21,7 @@ class Console {
         System.out.println("Cross's move");
     }
 
-    public void playerWrongMove() {
-        System.out.println("Tu juz ktos postawil znak. Sprobuj jeszcze raz");
+    public void thisFieldIsNotEmpty() {
+        System.out.println("This field is not empty. Try to choose another.");
     }
 }

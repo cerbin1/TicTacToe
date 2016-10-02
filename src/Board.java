@@ -12,7 +12,7 @@ class Board {
         charBoard = new char[9];
     }
 
-    public void setCharBoard() {
+    public void fillCharBoard() {
         for (int i = 0; i < charBoard.length; i++) {
             charBoard[i] = (char) (i + 49);
         }

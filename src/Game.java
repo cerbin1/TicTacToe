@@ -4,21 +4,21 @@ class Game {
         Board board = new Board();
         Player player = new Player();
 
-        board.setCharBoard();
+        board.fillCharBoard();
+        board.fillBooleanBoard();
+        console.displayHelloMessage();
+        console.displayInstructions();
         console.displayCharBoard(board.getCharBoard());
 
-        board.fillBooleanBoard();
-
-
         while (true) {
-            if (player.getTurn() % 2 == 0) {
-                console.circleMove();
-                player.setMove();
-                if (board.getBooleanBoardValueAtIndex(player.getMove())) {
-                    console.playerWrongMove();
+            if (player.getPlayersTurn() % 2 == 0) {
+                console.askForCircleMove();
+                player.setPlayersMove();
+                if (board.getBooleanBoardValueAtIndex(player.getPlayersMove())) {
+                    console.thisFieldIsNotEmpty();
                 } else {
-                    board.setCircle(player.getMove());
-                    board.setBooleanBoardTrueAtIndex(player.getMove());
+                    board.setCircle(player.getPlayersMove());
+                    board.setBooleanBoardTrueAtIndex(player.getPlayersMove());
                     console.displayCharBoard(board.getCharBoard());
                     if (player.checkIfPlayerWins(board.getCharBoard())) {
                         break;
@@ -27,12 +27,12 @@ class Game {
                 }
             } else {
                 console.crossMove();
-                player.setMove();
-                if (board.getBooleanBoardValueAtIndex(player.getMove())) {
-                    console.playerWrongMove();
+                player.setPlayersMove();
+                if (board.getBooleanBoardValueAtIndex(player.getPlayersMove())) {
+                    console.thisFieldIsNotEmpty();
                 } else {
-                    board.setCross(player.getMove());
-                    board.setBooleanBoardTrueAtIndex(player.getMove());
+                    board.setCross(player.getPlayersMove());
+                    board.setBooleanBoardTrueAtIndex(player.getPlayersMove());
                     console.displayCharBoard(board.getCharBoard());
                     if (player.checkIfPlayerWins(board.getCharBoard())) {
                         break;

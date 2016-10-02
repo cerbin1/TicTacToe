@@ -3,28 +3,28 @@ import java.util.Scanner;
 class Player {
     public final Scanner scanner = new Scanner(System.in);
 
-    private int move;
-    private int turn = 0;
+    private int playersMove;
+    private int playersTurn = 0;
 
-    void setMove() {
-        move = Integer.parseInt(scanner.nextLine());
+    void setPlayersMove() {
+        playersMove = Integer.parseInt(scanner.nextLine());
     }
 
-    public int getMove() {
-        return move;
+    public int getPlayersMove() {
+        return playersMove;
     }
 
     public void incrementTurn() {
-        turn++;
+        playersTurn++;
     }
 
-    public int getTurn() {
-        return turn;
+    public int getPlayersTurn() {
+        return playersTurn;
     }
 
     public boolean checkIfPlayerWins(char[] charBoard) {
         char znak;
-        if (turn % 2 == 0) {
+        if (playersTurn % 2 == 0) {
             znak = 'o';
         } else {
             znak = 'x';
