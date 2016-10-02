@@ -27,6 +27,13 @@ public class Board {
             booleanBoard[i] = false;
         }
     }
+    public boolean getBooleanBoardValueAtIndex(int index) {
+        return booleanBoard[index];
+    }
+
+    public void setBooleanBoardTrueAtIndex(int index) {
+        booleanBoard[index] = true;
+    }
 
 
     public char[] getCharBoard() {

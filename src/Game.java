@@ -7,13 +7,23 @@ public class Game {
         board.setCharBoard();
         console.displayCharBoard(board.getCharBoard());
 
+        board.setBooleanBoard();
+
+
         while(true) {
-            if (player.getTurn() % 2 == 1) {
+            if (player.getTurn() % 2 == 0) {
                 console.circleMove();
                 player.setMove();
-                board.setCircle(player.getMove());
-                console.displayCharBoard(board.getCharBoard());
-                player.incrementTurn();
+                if(board.getBooleanBoardValueAtIndex(player.getMove())){
+                    System.out.println("Tu juz ktos postawil znak. Sprobuj jeszcze raz");
+                }
+                else {
+                    board.setCircle(player.getMove());
+                    board.setBooleanBoardTrueAtIndex(player.getMove());
+
+                    console.displayCharBoard(board.getCharBoard());
+                    player.incrementTurn();
+                }
             }
             else {
                 console.crossMove();
@@ -22,8 +32,6 @@ public class Game {
                 console.displayCharBoard(board.getCharBoard());
                 player.incrementTurn();
             }
-
-
         }
     }
 }
