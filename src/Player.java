@@ -7,7 +7,7 @@ class Player {
     private int playersTurn = 0;
 
     boolean setPlayersMove() {
-            playersMove = Integer.parseInt(scanner.nextLine());
+        playersMove = Integer.parseInt(scanner.nextLine());
         return (playersMove < 1) || (playersMove > 10);
     }
 
