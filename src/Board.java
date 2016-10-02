@@ -7,7 +7,6 @@ class Board {
         initializeBooleanBoard();
     }
 
-
     private void initializeCharBoard() {
         charBoard = new char[9];
     }

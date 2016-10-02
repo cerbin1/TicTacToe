@@ -7,29 +7,29 @@ class Console {
         System.out.println("Enter the number of index where you want to put sign.");
     }
 
-    public void displayCharBoard(char[] charBoard) {
+    void displayCharBoard(char[] charBoard) {
         System.out.println("[" + charBoard[0] + "]" + "[" + charBoard[1] + "]" + "[" + charBoard[2] + "]");
         System.out.println("[" + charBoard[3] + "]" + "[" + charBoard[4] + "]" + "[" + charBoard[5] + "]");
         System.out.println("[" + charBoard[6] + "]" + "[" + charBoard[7] + "]" + "[" + charBoard[8] + "]");
     }
 
-    public void askForCircleMove() {
+    void askForCircleMove() {
         System.out.println("Circle move");
     }
 
-    public void askForCrossMove() {
+    void askForCrossMove() {
         System.out.println("Cross move");
     }
 
-    public void thisFieldIsNotEmpty() {
+    void thisFieldIsNotEmpty() {
         System.out.println("This field is not empty. Try to choose another.");
     }
 
-    public void drawn() {
+    void drawn() {
         System.out.println("Drawn! Nobody wins.");
     }
 
-    public void wrongMove() {
+    void wrongMove() {
         System.out.println("You entered wrong move. Try do it again.");
     }
 }
