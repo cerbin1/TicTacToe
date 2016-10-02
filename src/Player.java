@@ -6,8 +6,14 @@ class Player {
     private int playersMove;
     private int playersTurn = 0;
 
-    void setPlayersMove() {
-        playersMove = Integer.parseInt(scanner.nextLine());
+    boolean setPlayersMove() {
+            playersMove = Integer.parseInt(scanner.nextLine());
+        if ((playersMove < 1) || (playersMove > 10)) {
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 
     public int getPlayersMove() {

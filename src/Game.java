@@ -13,7 +13,15 @@ class Game {
         while (true) {
             if (player.getPlayersTurn() % 2 == 0) {
                 console.askForCircleMove();
-                player.setPlayersMove();
+                while (true) {
+                    if (player.setPlayersMove()) {
+                        console.wrongMove();
+                        console.askForCircleMove();
+                        console.displayCharBoard(board.getCharBoard());
+                    } else {
+                        break;
+                    }
+                }
                 if (board.getBooleanBoardValueAtIndex(player.getPlayersMove())) {
                     console.thisFieldIsNotEmpty();
                 } else {
@@ -25,8 +33,16 @@ class Game {
                     player.incrementTurn();
                 }
             } else {
-                console.crossMove();
-                player.setPlayersMove();
+                console.askForCrossMove();
+                while (true) {
+                    if (player.setPlayersMove()) {
+                        console.wrongMove();
+                        console.askForCrossMove();
+                        console.displayCharBoard(board.getCharBoard());
+                    } else {
+                        break;
+                    }
+                }
                 if (board.getBooleanBoardValueAtIndex(player.getPlayersMove())) {
                     console.thisFieldIsNotEmpty();
                 } else {

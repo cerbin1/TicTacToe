@@ -17,14 +17,19 @@ class Console {
         System.out.println("Circle move");
     }
 
-    public void crossMove() {
+    public void askForCrossMove() {
         System.out.println("Cross move");
     }
 
     public void thisFieldIsNotEmpty() {
         System.out.println("This field is not empty. Try to choose another.");
     }
+
     public void drawn() {
         System.out.println("Drawn! Nobody wins.");
+    }
+
+    public void wrongMove() {
+        System.out.println("You entered wrong move. Try do it again.");
     }
 }
