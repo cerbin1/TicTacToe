@@ -2,13 +2,19 @@ public class Game {
     void run() {
         Console console = new Console();
         Board board = new Board();
+        Player player = new Player();
 
         board.setCharBoard();
-        console.displayHelloMessage();
-        console.displayInstructions();
         console.displayCharBoard(board.getCharBoard());
 
-        console.circleMove();
+        while(true) {
+            console.circleMove();
+            player.setMove();
+            board.setMove(player.getMove());
+
+            console.displayCharBoard(board.getCharBoard());
+
+        }
     }
 }
 

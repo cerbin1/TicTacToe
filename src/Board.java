@@ -9,13 +9,20 @@ public class Board {
     public void initializeCharBoard() {
         charBoard = new char[9];
     }
+
     public void setCharBoard() {
         for (int i = 0; i < charBoard.length; i++) {
             charBoard[i] = (char) (i + 49);
         }
     }
+
     public char[] getCharBoard() {
         return charBoard;
+    }
+
+    public void setMove(int index) {
+        charBoard[index - 1] = 'o';
+
     }
 
 
