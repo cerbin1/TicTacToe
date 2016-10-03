@@ -34,4 +34,12 @@ class Console {
     void wrongMove() {
         System.out.println("You entered wrong move. Try do it again.");
     }
+
+    void circleWins() {
+        System.out.println("Circle wins!");
+    }
+
+    void crossWins() {
+        System.out.println("Cross wins!");
+    }
 }

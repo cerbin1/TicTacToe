@@ -5,8 +5,11 @@ import java.util.Scanner;
 class Player {
     private final Scanner scanner = new Scanner(System.in);  // TODO to nie powinno być tu
 
+    private Console console = new Console();
+
     private int playersMove;
     private int playersTurn = 0;
+    private char playersCharacter; // TODO to powinien byc enum
 
     boolean setPlayersMove() {
         playersMove = Integer.parseInt(scanner.nextLine());
@@ -26,7 +29,6 @@ class Player {
     }
 
     boolean checkIfPlayerWins(Board b) {
-        char playersCharacter; // TODO to powinien byc enum
         if (playersTurn % 2 == 0) { // TODO to do wydzielenia
             playersCharacter = 'o';
         } else {
@@ -39,14 +41,18 @@ class Player {
                 ((b.getCharBoard()[1] == playersCharacter) && (b.getCharBoard()[4] == playersCharacter) && (b.getCharBoard()[7] == playersCharacter)) ||
                 ((b.getCharBoard()[2] == playersCharacter) && (b.getCharBoard()[5] == playersCharacter) && (b.getCharBoard()[8] == playersCharacter)) ||
                 ((b.getCharBoard()[0] == playersCharacter) && (b.getCharBoard()[4] == playersCharacter) && (b.getCharBoard()[8] == playersCharacter))) {
-            if (playersCharacter == 'o') { // TODO ten cały if powinien być gdzieś indziej.
-                System.out.println("Circle wins!");
-            } else {
-                System.out.println("Cross wins!");
-            }
+            checkWhoWins();
             return true;
         } else {
             return false;
+        }
+    }
+
+    private void checkWhoWins() {
+        if (playersCharacter == 'o') {
+            console.circleWins();
+        } else {
+            console.crossWins();
         }
     }
 
