@@ -1,3 +1,8 @@
+package bartek;
+
+import bartek.Board;
+import bartek.Console;
+
 class Game {
     void run() {
         Console console = new Console();

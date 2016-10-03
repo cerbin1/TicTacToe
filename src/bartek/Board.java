@@ -1,3 +1,5 @@
+package bartek;
+
 class Board {
     private char[] charBoard; // TODO po co dwie tablice? i czemu char a nie enum?
     private boolean[] booleanBoard;

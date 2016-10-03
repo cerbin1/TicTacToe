@@ -1,3 +1,5 @@
+package bartek;
+
 import java.util.Scanner;
 
 class Player {
