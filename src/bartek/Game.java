@@ -13,7 +13,7 @@ class Game {
         board.fillBooleanBoard();
         console.displayHelloMessage();
         console.displayInstructions();
-        console.displayCharBoard(board.getCharBoard()); // TODO board powinien byc polem console, a nie przez parametr
+        console.displayCharBoard(board);
 
         while (true) {
             if (player.getPlayersTurn() % 2 == 0) {
@@ -22,7 +22,7 @@ class Game {
                     if (player.setPlayersMove()) {
                         console.wrongMove();
                         console.askForCircleMove();
-                        console.displayCharBoard(board.getCharBoard());
+                        console.displayCharBoard(board);
                     } else {
                         break;
                     }
@@ -32,8 +32,8 @@ class Game {
                 } else {
                     board.setCircle(player.getPlayersMove());
                     board.setBooleanBoardTrueAtIndex(player.getPlayersMove());
-                    if (player.checkIfPlayerWins(board.getCharBoard())) {
-                        console.displayCharBoard(board.getCharBoard());
+                    if (player.checkIfPlayerWins(board)) {
+                        console.displayCharBoard(board);
                         break;
                     }
                     player.incrementTurn();
@@ -44,7 +44,7 @@ class Game {
                     if (player.setPlayersMove()) {
                         console.wrongMove();
                         console.askForCrossMove();
-                        console.displayCharBoard(board.getCharBoard());
+                        console.displayCharBoard(board);
                     } else {
                         break;
                     }
@@ -54,8 +54,8 @@ class Game {
                 } else {
                     board.setCross(player.getPlayersMove());
                     board.setBooleanBoardTrueAtIndex(player.getPlayersMove());
-                    if (player.checkIfPlayerWins(board.getCharBoard())) {
-                        console.displayCharBoard(board.getCharBoard());
+                    if (player.checkIfPlayerWins(board)) {
+                        console.displayCharBoard(board);
                         break;
                     }
                     player.incrementTurn();
@@ -63,9 +63,10 @@ class Game {
             }
             if (player.getPlayersTurn() == 9) {
                 console.drawn();
+                console.displayCharBoard(board);
                 break;
             }
-            console.displayCharBoard(board.getCharBoard());
+            console.displayCharBoard(board);
         }
     }
 }

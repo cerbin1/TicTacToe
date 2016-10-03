@@ -9,10 +9,10 @@ class Console {
         System.out.println("Enter the number of index where you want to put sign.");
     }
 
-    void displayCharBoard(char[] charBoard) {
-        System.out.println("[" + charBoard[0] + "]" + "[" + charBoard[1] + "]" + "[" + charBoard[2] + "]");
-        System.out.println("[" + charBoard[3] + "]" + "[" + charBoard[4] + "]" + "[" + charBoard[5] + "]");
-        System.out.println("[" + charBoard[6] + "]" + "[" + charBoard[7] + "]" + "[" + charBoard[8] + "]");
+    void displayCharBoard(Board b) {
+        System.out.println("[" + b.getCharBoard()[0] + "]" + "[" + b.getCharBoard()[1] + "]" + "[" + b.getCharBoard()[2] + "]");
+        System.out.println("[" + b.getCharBoard()[3] + "]" + "[" + b.getCharBoard()[4] + "]" + "[" + b.getCharBoard()[5] + "]");
+        System.out.println("[" + b.getCharBoard()[6] + "]" + "[" + b.getCharBoard()[7] + "]" + "[" + b.getCharBoard()[8] + "]");
     }
 
     void askForCircleMove() { // TODO metody ask powinny zrobić scanner.nextLine() i zwracać tekst

@@ -25,20 +25,20 @@ class Player {
         return playersTurn;
     }
 
-    boolean checkIfPlayerWins(char[] charBoard) {
+    boolean checkIfPlayerWins(Board b) {
         char playersCharacter; // TODO to powinien byc enum
         if (playersTurn % 2 == 0) { // TODO to do wydzielenia
             playersCharacter = 'o';
         } else {
             playersCharacter = 'x';
         }
-        if (((charBoard[0] == playersCharacter) && (charBoard[1] == playersCharacter) && (charBoard[2] == playersCharacter)) ||
-                ((charBoard[3] == playersCharacter) && (charBoard[4] == playersCharacter) && (charBoard[5] == playersCharacter)) ||
-                ((charBoard[6] == playersCharacter) && (charBoard[7] == playersCharacter) && (charBoard[8] == playersCharacter)) ||
-                ((charBoard[0] == playersCharacter) && (charBoard[3] == playersCharacter) && (charBoard[6] == playersCharacter)) ||
-                ((charBoard[1] == playersCharacter) && (charBoard[4] == playersCharacter) && (charBoard[7] == playersCharacter)) ||
-                ((charBoard[2] == playersCharacter) && (charBoard[5] == playersCharacter) && (charBoard[8] == playersCharacter)) ||
-                ((charBoard[0] == playersCharacter) && (charBoard[4] == playersCharacter) && (charBoard[8] == playersCharacter))) {
+        if (((b.getCharBoard()[0] == playersCharacter) && (b.getCharBoard()[1] == playersCharacter) && (b.getCharBoard()[2] == playersCharacter)) ||
+                ((b.getCharBoard()[3] == playersCharacter) && (b.getCharBoard()[4] == playersCharacter) && (b.getCharBoard()[5] == playersCharacter)) ||
+                ((b.getCharBoard()[6] == playersCharacter) && (b.getCharBoard()[7] == playersCharacter) && (b.getCharBoard()[8] == playersCharacter)) ||
+                ((b.getCharBoard()[0] == playersCharacter) && (b.getCharBoard()[3] == playersCharacter) && (b.getCharBoard()[6] == playersCharacter)) ||
+                ((b.getCharBoard()[1] == playersCharacter) && (b.getCharBoard()[4] == playersCharacter) && (b.getCharBoard()[7] == playersCharacter)) ||
+                ((b.getCharBoard()[2] == playersCharacter) && (b.getCharBoard()[5] == playersCharacter) && (b.getCharBoard()[8] == playersCharacter)) ||
+                ((b.getCharBoard()[0] == playersCharacter) && (b.getCharBoard()[4] == playersCharacter) && (b.getCharBoard()[8] == playersCharacter))) {
             if (playersCharacter == 'o') { // TODO ten cały if powinien być gdzieś indziej.
                 System.out.println("Circle wins!");
             } else {
